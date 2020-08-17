@@ -6,7 +6,7 @@ Para executar o projeto instale o Docker e o Docker Compose. entre no diretório
 # Autenticação
 
 Para efetuar a autenticação crie um usúario em POST localhost:8080/user, enviando como corpo uma mensagem em JSON com os atributos email e password, exemplo: {"email": "João@gmail.com", "password" : "Joao12345"}.
-Ao criar o usuário o atributo pegue o token retornado para executar o CRUD dos carros.
+Ao criar o usuário o pegue o token retornado para executar a API dos carros.
 Caso Já tenha um usuário cadastrado, utilize POST localhost:8080/user/login com um JSON no corpo da requisição com os atributos email e password, para retornar o token JWT de acesso.
 o token gerado tem inspiração de 50 minutos.
 
