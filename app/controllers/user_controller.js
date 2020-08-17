@@ -22,14 +22,14 @@ exports.create = (req, res) => {
 
   user.save(function (err) {
     if (err) {
-      return res.status(400).json(err);
+      return res.status(500).json(err);
     }
     const token = get_token(user);
     res.json({success: true, token});
   })
 };
 
-exports.login = function (req, res) {
+exports.login = (req, res) => {
   if(!req.body.email){
     return res.status(400).json({error: "Email address is required."});
   }
@@ -48,4 +48,3 @@ exports.login = function (req, res) {
     }
   });
 }
-    
